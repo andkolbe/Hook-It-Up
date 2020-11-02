@@ -1,9 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import Home from './pages/Home';
+import Users from './pages/Users';
+import UserDetails from './pages/UserDetails';
 import NotFound from './pages/NotFound';
-import UserInfo from './pages/UserInfo';
 
 const App = () => {
     return (
@@ -11,11 +10,11 @@ const App = () => {
             <Switch>
 
                 <Route exact path="/">
-                    <Home />
+                    <Users />
                 </Route>
 
-                <Route exact path="/userinfo">
-                    <UserInfo />
+                <Route exact path="/:id/details">
+                    <UserDetails />
                 </Route>
 
                 <Route path="*"> 
