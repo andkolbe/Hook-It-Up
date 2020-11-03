@@ -24,12 +24,12 @@ const Users = () => {
             <h1 className="text-center">Highly Sensitive Information About These People</h1>
             <div className="col-10">
                 <ul className="list-group list-group-flush">
-                    {users.map(user => {
-                        <li className="list-group-item d-flex justify-content-between align-items-center">
+                    {users.map(user => (
+                        <li key={user.id} className="list-group-item d-flex justify-content-between align-items-center">
                             {user.name}
-                            <Link className="btn btn-link" to={`/users/${user.id}`}>Click Here To Steal Identities!</Link>
+                            <Link className="btn btn-link" to={`/${user.id}/details`}>Click Here To Steal Identity!</Link>
                         </li>
-                    })}
+                    ))}
                 </ul>
             </div>
         </Layout>
